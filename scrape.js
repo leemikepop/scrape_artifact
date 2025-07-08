@@ -64,7 +64,8 @@ async function scrapeAndFetch(url) {
       // 逐一執行 fetch_artifact
       for (const artifact of artifacts) {
         if (artifact.name) {
-          const command = `/home/leemi/Workspaces/android/fetch_artifact/fetch_artifact --target=${target} --build_id=${buildId} --artifact="${artifact.name}"`;
+          // const command = `//path/to/fetch_artifact --target=${target} --build_id=${buildId} --artifact="${artifact.name}"`;
+          const command = `/home/leemi/Workspaces/Android/scrape_artifact/fetch_artifact --target=${target} --build_id=${buildId} --artifact="${artifact.name}"`;
           console.log(`執行指令: ${command}`);
 
           exec(command, (error, stdout, stderr) => {
